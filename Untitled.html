@@ -1,0 +1,10 @@
+<p>Total Views: <span id="viewCount">0</span></p>
+
+<script>
+  fetch("https://my-protfilo.onrender.com/api/view")
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("viewCount").innerText = data.views;
+    })
+    .catch(err => console.error(err));
+</script>

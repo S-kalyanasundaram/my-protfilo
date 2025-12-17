@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #0b1c24, #0e2a35);
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Header */
+.main-header {
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0b1c24;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.main-header h1 {
+  font-size: 22px;
+}
+
+.main-header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #9fd3ff;
+  font-weight: 500;
+}
+
+.main-header nav a:hover {
+  color: #fff;
+}
+
+/* Section */
+.developer-section,
+.contact-section {
+  padding: 60px 8%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* Cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.dev-card {
+  background: linear-gradient(145deg, #1b4f6b, #12394f);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.dev-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255,255,255,0.08), transparent 60%);
+}
+
+.dev-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Text */
+.project-title {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.company-name {
+  font-size: 14px;
+  color: #9fd3ff;
+  margin-bottom: 14px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills span {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.contact-grid a {
+  background: linear-gradient(135deg, #2c3850, #213646);
+  color: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-grid a:hover {
+  background: linear-gradient(135deg, #2c504e, #146390);
+}
+
+/* Footer */
+.main-footer {
+  padding: 20px;
+  text-align: center;
+  background: #0b1c24;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+  .main-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .info {
+    flex-direction: column;
+  }
+}
